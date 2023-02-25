@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+  background-color: #fec601;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  transition: transform 0.3s ease-in;
+  color: #5465ff;
+}
+
+button:hover {
+  transform: scale(1.08);
+}
+
+#more iconify-icon {
+  transition: transform 0.3s ease-in;
+}
+
+#more:hover iconify-icon {
+  transform: rotate(180deg);
+}
+
+h1,
+h2 {
+  color: #788bff;
+  word-break: break-all !important;
+  margin: 0;
+}
+
+h4 {
+  color: #5465ff;
+  word-break: break-all !important;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: #bfd7ff;
+  word-break: break-all !important;
+}
+
+header,
+footer {
+  background-color: #e2fdff;
+  color: #5465ff;
+}
+
+.container-fluid {
+  height: 145vh !important;
+}
+
+#current-user {
+  width: 500px;
+  box-shadow: -10px 10px 10px 1px #000000;
+  background-color: #e2fdff;
+}
+
+.moreinfo {
+  width: 600px;
+  height: 100% !important;
+  overflow: hidden;
+  display: none !important;
+  background-color: transparent;
+}
+
+.show-moreinfo {
+  width: 500px;
+}
+
+.show {
+  display: flex !important;
+  animation: showAddInfo 0.3s ease-in;
+}
+
+footer p {
+  word-break: break-all;
+}
+
+@keyframes showAddInfo {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .container-fluid {
+    height: auto !important;
+  }
+
+  #current-user {
+    width: 100%;
+    height: auto;
+  }
+
+  .moreinfo {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .show-moreinfo {
+    width: 100%;
+  }
+
+  .age-gender,
+  .cel,
+  .location {
+    flex-direction: column !important;
+  }
+
+  .age-gender #age {
+    padding-bottom: 18px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #current-user {
+    box-shadow: 0px 0px 10px 3px #000000;
+    word-wrap: break-word !important;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .buttons {
+    flex-direction: column !important;
+  }
+
+  #more {
+    flex-direction: column !important;
+  }
+}
